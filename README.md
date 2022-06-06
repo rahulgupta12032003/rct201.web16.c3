@@ -63,6 +63,10 @@
     - Get total count of votes of a candidate
     - `{ status: x }` in success, where x is count
     - `{ status: "cannot find user" }` if user not found
+  - Apart from these route, create 2 routes for test cases:
+    - `/db`, GET, will just return the entire db.json as it is
+    - `/db` POST, will store WHATEVER we give in req.body to db.json (override entire previous data)
+    - both of these are only for test cases so they wont need apikey or anything else.
 - These are the only routes you need to make
 - for simplicity you can use synchronous file reading and writting methods, asynchronous is also acceptable
 - Once done, deploy the application to `heroku`
